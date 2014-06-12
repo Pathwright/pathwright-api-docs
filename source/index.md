@@ -5,7 +5,9 @@ language_tabs:
   - shell
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='mailto:developers@pathwright.com'>Request an API Key</a>
+  - <a href='mailto:developers@pathwright.com'>Ask for help</a>
+  - <a href='http://www.hipchat.com/g1elqoUVO'>Join the developer support chat</a>
 
 includes:
   - errors
@@ -20,6 +22,21 @@ search: true
 are subject to frequent change, and are here for early adopters to start
 experimenting with.
 
+# Authentication
+
+**To request an API key, send an email to developers@pathwright.com**
+
+Authentication to the Pathwright API happens with HTTP Basic authentication.
+Your Base64 encoded API key is used as the basic auth username. You do not
+need to provide a password.
+
+All requests API requests must be made over HTTPS. You must authenticate for all requests.
+
+```shell
+curl "https://api.pathwright.com/api/public/credential-check/"
+  -H "Authorization: Basic Base64APIKeyHere"
+```
+
 # Gift subscriptions
 
 Gift subscriptions are used to give someone a free subscription to a school
@@ -31,7 +48,7 @@ any time.
 
 ```shell
 curl "https://api.pathwright.com/api/public/subscription/gift-code/"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: Basic Base64APIKeyHere"
 ```
 
 > The above command returns JSON structured like this:
