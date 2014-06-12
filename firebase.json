@@ -1,0 +1,9 @@
+{
+  "firebase": "pathwright-api",
+  "public": "build",
+  "ignore": [
+    "firebase.json",
+    ".*",
+    "**/node_modules/**"
+  ]
+}
