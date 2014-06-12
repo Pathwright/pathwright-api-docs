@@ -32,10 +32,37 @@ need to provide a password.
 
 All requests API requests must be made over HTTPS. You must authenticate for all requests.
 
+
+## Check your credentials
+
+This call may be used to validate that your credentials are in good standing.
+You will also receive some information about who your credentials are
+associated with, when they were created, and which permissions they have.
+
 ```shell
 curl "https://api.pathwright.com/api/public/credential-check/"
   -H "Authorization: Basic Base64APIKeyHere"
 ```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "secret_key": "SecretKeyHere",
+  "school": 17,
+  "user": 4,
+  "description": "Test key",
+  "created_time": "2014-05-15T00:00:00"
+}
+```
+
+### HTTP Request
+
+`GET https://api.pathwright.com/api/public/credential-check/`
+
+### Query Parameters
+
+No query parameters are necessary.
 
 # Gift subscriptions
 
