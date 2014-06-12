@@ -1,6 +1,6 @@
 # Errors
 
-The Kittn API uses the following error codes:
+The Pathwright API may return the following error codes:
 
 
 Error Code | Meaning
